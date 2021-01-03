@@ -11,7 +11,13 @@ orange
 cyan
 azure
 french rose
+<<<<<<< Updated upstream
 fuchsia
+cyber yellow
+gold
+french violet
+flame
+
 
 git status - to check what's new in your repository.
 
