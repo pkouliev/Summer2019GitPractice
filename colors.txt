@@ -4,6 +4,7 @@ green
 black
 yellow
 purple
+navy blue
 
 
 git status - to check what's new in your repository.
