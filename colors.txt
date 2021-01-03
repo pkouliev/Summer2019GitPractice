@@ -113,6 +113,12 @@ Changes not staged for commit:
 
  conflict resolved!
 
+ you and someone else working in the same project in the same time, she/he pushed before you then you pushed your codes,
+ conflict happens, since the version changed before you push.
+
+ If different files were modified, git will resolve conflict automatically.
+ If same file was modified, you will have to resolve conflict manually.
+
 
 
 
