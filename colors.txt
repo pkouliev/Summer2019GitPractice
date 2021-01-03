@@ -174,7 +174,17 @@ bottom part is stashed code
 
 git stash pop - to apply last stash to your code back
 
-After git stash pop, resolve conflicts, then commit your code again.
+After git stash pop, resolve conflicts, then commit your code again.ssages
+
+git stash list - to see list of stashes
+
+#### after conflict warning messages:
+1. git stash save "message"
+2. git pull
+3. git stash pop
+4. git add .
+5. git commit -m "message"
+6. git push
 
 
 
