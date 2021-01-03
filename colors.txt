@@ -1,6 +1,7 @@
 blue
 red
 green
+black
 
 git status - to check what's new in your repository.
 
@@ -61,6 +62,40 @@ Changes not staged for commit:
        If some file/files conflicts, you can discard your updates and pull code successfully.
 
     3. Resolve merge conflict right away.
+
+        Step 1. add your file to the staging area (git add .)
+        Step 2. commit changes
+        Step 3. pull updates from remote repository (git pull)
+        Step 4. open conflicting files and either manually fix them or use intellij conflict resolver, etc.
+
+    .................. Summer2019GitPractice % git add colors.txt
+    .................. Summer2019GitPractice % git commit -m "added green color"
+    [master dd0a6ec] added green color
+     1 file changed, 30 insertions(+), 1 deletion(-)
+    .................. Summer2019GitPractice % git pull
+    Auto-merging colors.txt
+
+    CONFLICT (content): Merge conflict in colors.txt
+    Automatic merge failed; fix conflicts and then commit the result.
+
+ blue
+ red
+ <<<<<<<< HEAD
+ green
+ ========
+ black
+ >>>>>>>> esgshgwhhhsthsthshhhhhhhhsr
+
+ ======= - means where is a conflict in file
+
+ <<<<<<< - HEAD under head - it's your changes
+
+ under ========== it's cjanges that someone else did it before you. Last commit changes.
+
+ How to fix this conflict manually?
+
+    You can manually edit file and decide what code has to stay, and then simply commit your changes again.
+
 
 
 
