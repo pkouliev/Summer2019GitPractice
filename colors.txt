@@ -126,6 +126,25 @@ Changes not staged for commit:
  If different files were modified, git will resolve conflict automatically.
  If same file was modified, you will have to resolve conflict manually.
 
+ if you are in vim editor, press I to insert text and type :q/:q! end hit
+ enter to quit
+
+ git checkout filename - to discard all changes. File will be changed accordingly to last commit.
+ Pretty much we are losing changes and file will have same content as on last commit.
+
+ .................. Summer2019GitPractice % git checkout colors.txt
+ Updated 1 path from the index
+ .................. Summer2019GitPractice % git pull
+ Updating c5661ab..f5804b9
+ Fast-forward
+  colors.txt | 1 +
+  1 file changed, 1 insertion(+)
+
+##########start typing file name or folder name and click TAB for auto-complete.
+
+Another way to discard ALL CHANGES: git reset --hard
+
+
 
 
 
