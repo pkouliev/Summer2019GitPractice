@@ -12,7 +12,6 @@ cyan
 azure
 french rose
 
-
 git status - to check what's new in your repository.
 
 On branch master
@@ -151,6 +150,14 @@ git stash list - to see your wish list or collections of stashes
 
 Developers stash changes when they didn't complete development but they need to pull updates.
 So to avoid braking a code, developers stash changes and open them when they pulled and can continue developing unfinished code.
+=======
+#### git stash save "added cyber yellow color and gold"
+
+stashing it's like moving your changes from cart to wish list.
+In this case you can resolve conflict and not lose your changes
+
+top part is a latest changes
+bottom part is stashed code
 
 
 
