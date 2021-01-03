@@ -10,6 +10,7 @@ white
 orange
 cyan
 azure
+french rose
 
 
 git status - to check what's new in your repository.
