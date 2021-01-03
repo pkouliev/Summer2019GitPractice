@@ -96,6 +96,24 @@ Changes not staged for commit:
 
     You can manually edit file and decide what code has to stay, and then simply commit your changes again.
 
+ .................. Summer2019GitPractice % git add colors.txt
+ .................. Summer2019GitPractice % git commit -m "fixed merge conflict in colors.txt file"
+ [master 3f5cecf] fixed merge conflict in colors.txt file
+ .................. Summer2019GitPractice % git push
+ Enumerating objects: 10, done.
+ Counting objects: 100% (10/10), done.
+ Delta compression using up to 8 threads
+ Compressing objects: 100% (6/6), done.
+ Writing objects: 100% (6/6), 1.86 KiB | 1.86 MiB/s, done.
+ Total 6 (delta 3), reused 0 (delta 0)
+ remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+ To https://github.com/......../Summer2019GitPractice.git
+    fbe33bc..3f5cecf  master -> master
+
+
+ conflict resolved!
+
+
 
 
 
