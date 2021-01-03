@@ -9,6 +9,7 @@ pink
 white
 orange
 cyan
+12345
 
 
 git status - to check what's new in your repository.
