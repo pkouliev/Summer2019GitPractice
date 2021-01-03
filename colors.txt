@@ -147,6 +147,11 @@ Changes not staged for commit:
 
 Another way to discard ALL CHANGES: git reset --hard
 
+git stash list - to see your wish list or collections of stashes
+
+Developers stash changes when they didn't complete development but they need to pull updates.
+So to avoid braking a code, developers stash changes and open them when they pulled and can continue developing unfinished code.
+
 
 
 
