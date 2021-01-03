@@ -11,6 +11,7 @@ orange
 cyan
 azure
 french rose
+fuchsia
 
 git status - to check what's new in your repository.
 
