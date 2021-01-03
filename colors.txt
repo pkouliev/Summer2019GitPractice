@@ -1,4 +1,5 @@
 blue
+red
 
 git status - to check what's new in your repository.
 
