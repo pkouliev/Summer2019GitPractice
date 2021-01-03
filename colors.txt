@@ -9,6 +9,7 @@ pink
 white
 orange
 cyan
+azure
 
 
 git status - to check what's new in your repository.
