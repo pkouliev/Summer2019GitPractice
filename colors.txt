@@ -1,5 +1,6 @@
 blue
 red
+green
 
 git status - to check what's new in your repository.
 
@@ -31,7 +32,35 @@ Changes not staged for commit:
  Writing objects: 100% (3/3), 494 bytes | 494.00 KiB/s, done.
  Total 3 (delta 1), reused 0 (delta 0)
  remote: Resolving deltas: 100% (1/1), completed with 1 local object.
- To https://github.com/pkouliev/Summer2019GitPractice.git
+ To https://github.com/......./Summer2019GitPractice.git
     f6deed2..01c4b6b  master -> master
+
+ git pull
+ remote: Enumerating objects: 5, done.
+ remote: Counting objects: 100% (5/5), done.
+ remote: Compressing objects: 100% (3/3), done.
+ remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+ Unpacking objects: 100% (3/3), done.
+ From https://github.com/........./Summer2019GitPractice
+    5541de4..fbe33bc  master     -> origin/master
+ Updating 5541de4..fbe33bc
+ error: Your local changes to the following files would be overwritten by merge:
+         colors.txt
+ Please commit your changes or stash them before you merge.
+ Aborting
+
+ Because I modified a file that was changed by someone else me, I cannot pull updates.
+ This situation calls merge conflict.
+
+    There are 3 solutions:
+
+    1. Stash changes. It's when you save your changes on a side.
+       Then, you can apply your changes again after pull.
+
+    2. Discard changes. It's pretty much loss of your updates.
+       If some file/files conflicts, you can discard your updates and pull code successfully.
+
+    3. Resolve merge conflict right away.
+
 
 
