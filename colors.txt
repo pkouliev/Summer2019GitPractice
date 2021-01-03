@@ -8,6 +8,7 @@ navy blue
 pink
 white
 orange
+Cayan
 
 
 git status - to check what's new in your repository.
