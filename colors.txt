@@ -5,6 +5,7 @@ black
 yellow
 purple
 navy blue
+pink
 
 
 git status - to check what's new in your repository.
@@ -122,6 +123,9 @@ Changes not staged for commit:
 
  If different files were modified, git will resolve conflict automatically.
  If same file was modified, you will have to resolve conflict manually.
+
+ if you are in vim terminal, it's a terminal text editor, press I to insert text and type :q/:q! end hit enter to quit.
+ Then just click control/command + c
 
 
 
