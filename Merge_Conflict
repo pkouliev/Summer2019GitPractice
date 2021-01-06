@@ -1,0 +1,30 @@
+
+Merge conflict - it's when multiple contributors (2 people) changed same file.
+
+To resolve conflict, we can do couple things:
+    1. Stash changes (if you didn't finish, and you cannot combine changes, stash your changes.
+                      In this case, you are not loosing changes forever.)
+
+    2. Discard your changes (you are losing your changes forever)
+        either git checkout file or git reset --hard
+
+    3. Resolve conflict
+        first of all we have to commit our changes
+        then pull
+        and check conflicting files (fix manually or through other tools, like intellij)
+        accept theirs changes
+        accept yours (your changes)
+        merge changes (compromise)
+
+        once conflict resolved, we can commit and push changes to githib.
+
+    4. Just clone project again and copy paste your changes
+        (No, but this is what people usually do)
+
+###################################################################
+
+Git Branches
+        What is branch?
+            It's one version of your project.
+            With git, we can have multiple version of project that exist in parallel.
+            Every branch can have independent commits history.
