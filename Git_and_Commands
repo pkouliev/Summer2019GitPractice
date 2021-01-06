@@ -1,0 +1,161 @@
+
+git status - to check what's new in your repository.
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   colors.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   colors.txt
+
+###git add colors.txt  - to stage file (prepare this file for commit)
+
+###git commit -m "added blue color" - to commit changes
+[master 01c4b6b] added blue color
+ 1 file changed, 15 insertions(+)
+ create mode 100644 colors.txt
+
+
+ git push - to send changes to remote repository (github)
+ Enumerating objects: 4, done.
+ Counting objects: 100% (4/4), done.
+ Delta compression using up to 8 threads
+ Compressing objects: 100% (3/3), done.
+ Writing objects: 100% (3/3), 494 bytes | 494.00 KiB/s, done.
+ Total 3 (delta 1), reused 0 (delta 0)
+ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+ To https://github.com/......./Summer2019GitPractice.git
+    f6deed2..01c4b6b  master -> master
+
+ git pull
+ remote: Enumerating objects: 5, done.
+ remote: Counting objects: 100% (5/5), done.
+ remote: Compressing objects: 100% (3/3), done.
+ remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+ Unpacking objects: 100% (3/3), done.
+ From https://github.com/........./Summer2019GitPractice
+    5541de4..fbe33bc  master     -> origin/master
+ Updating 5541de4..fbe33bc
+ error: Your local changes to the following files would be overwritten by merge:
+         colors.txt
+ Please commit your changes or stash them before you merge.
+ Aborting
+
+ Because I modified a file that was changed by someone else me, I cannot pull updates.
+ This situation calls merge conflict.
+
+    There are 3 solutions:
+
+    1. Stash changes. It's when you save your changes on a side.
+       Then, you can apply your changes again after pull.
+
+    2. Discard changes. It's pretty much loss of your updates.
+       If some file/files conflicts, you can discard your updates and pull code successfully.
+
+    3. Resolve merge conflict right away.
+
+        Step 1. add your file to the staging area (git add .)
+        Step 2. commit changes
+        Step 3. pull updates from remote repository (git pull)
+        Step 4. open conflicting files and either manually fix them or use intellij conflict resolver, etc.
+
+    .................. Summer2019GitPractice % git add colors.txt
+    .................. Summer2019GitPractice % git commit -m "added green color"
+    [master dd0a6ec] added green color
+     1 file changed, 30 insertions(+), 1 deletion(-)
+    .................. Summer2019GitPractice % git pull
+    Auto-merging colors.txt
+
+    CONFLICT (content): Merge conflict in colors.txt
+    Automatic merge failed; fix conflicts and then commit the result.
+
+ blue
+ red
+ <<<<<<<< HEAD
+ green
+ ========
+ black
+ >>>>>>>> esgshgwhhhsthsthshhhhhhhhsr
+
+ ======= - means where is a conflict in file
+
+ <<<<<<< - HEAD under head - it's your changes
+
+ under ========== it's cjanges that someone else did it before you. Last commit changes.
+
+ How to fix this conflict manually?
+
+    You can manually edit file and decide what code has to stay, and then simply commit your changes again.
+
+ .................. Summer2019GitPractice % git add colors.txt
+ .................. Summer2019GitPractice % git commit -m "fixed merge conflict in colors.txt file"
+ [master 3f5cecf] fixed merge conflict in colors.txt file
+ .................. Summer2019GitPractice % git push
+ Enumerating objects: 10, done.
+ Counting objects: 100% (10/10), done.
+ Delta compression using up to 8 threads
+ Compressing objects: 100% (6/6), done.
+ Writing objects: 100% (6/6), 1.86 KiB | 1.86 MiB/s, done.
+ Total 6 (delta 3), reused 0 (delta 0)
+ remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+ To https://github.com/......../Summer2019GitPractice.git
+    fbe33bc..3f5cecf  master -> master
+
+
+ conflict resolved!
+
+ you and someone else working in the same project in the same time, she/he pushed before you then you pushed your codes,
+ conflict happens, since the version changed before you push.
+
+ If different files were modified, git will resolve conflict automatically.
+ If same file was modified, you will have to resolve conflict manually.
+
+ if you are in vim editor, press I to insert text and type :q/:q! end hit
+ enter to quit
+
+ git checkout filename - to discard all changes. File will be changed accordingly to last commit.
+ Pretty much we are losing changes and file will have same content as on last commit.
+
+ .................. Summer2019GitPractice % git checkout colors.txt
+ Updated 1 path from the index
+ .................. Summer2019GitPractice % git pull
+ Updating c5661ab..f5804b9
+ Fast-forward
+  colors.txt | 1 +
+  1 file changed, 1 insertion(+)
+
+##########start typing file name or folder name and click TAB for auto-complete.
+
+Another way to discard ALL CHANGES: git reset --hard
+
+git stash list - to see your wish list or collections of stashes
+
+Developers stash changes when they didn't complete development but they need to pull updates.
+So to avoid braking a code, developers stash changes and open them when they pulled and can continue developing unfinished code.
+=======
+#### git stash save "added cyber yellow color and gold"
+
+stashing it's like moving your changes from cart to wish list.
+In this case you can resolve conflict and not lose your changes
+
+top part is a latest changes
+bottom part is stashed code
+
+git stash pop - to apply last stash to your code back
+
+After git stash pop, resolve conflicts, then commit your code again.ssages
+
+git stash list - to see list of stashes
+
+#### after conflict warning messages:
+1. git stash save "message"
+2. git pull
+3. git stash pop
+4. git add .
+5. git commit -m "message"
+6. git push
