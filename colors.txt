@@ -11,8 +11,6 @@ orange
 cyan
 azure
 french rose
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 fuchsia
 cyber yellow
 gold
