@@ -20,11 +20,3 @@ To resolve conflict, we can do couple things:
 
     4. Just clone project again and copy paste your changes
         (No, but this is what people usually do)
-
-###################################################################
-
-Git Branches
-        What is branch?
-            It's one version of your project.
-            With git, we can have multiple version of project that exist in parallel.
-            Every branch can have independent commits history.

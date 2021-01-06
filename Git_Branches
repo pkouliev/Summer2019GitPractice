@@ -1,0 +1,68 @@
+
+
+Git Branches
+        What is branch?
+            It's one version of your project.
+            With git, we can have multiple version of project that exist in parallel.
+            Every branch can have independent commits history.
+
+            Ideally, everyone works on their own branch, and then once work is done,
+            you can create pull request to apply your changes to the main branch.
+            This flow, allows to review code before accepting any changes.
+
+            Use a branch to isolate development work without affecting other branches in the repository.
+            Each repository has one default branch, and can have multiple other branches.
+            You can merge a branch into another branch using a pull request.
+
+
+            Commands:
+
+               git branch
+               * master
+               Master branch should have latest stable and confirmed code.
+
+               Ideally, master branch shouldn't accept direct commits.
+               Otherwise, changes can be committed without code review.
+               Test lead usually reviews code.
+               But if there is no team/test lead then we do peer review.
+
+               Everyone's code must go through review.
+               But, test lead can decide/choose the flow.
+
+               Every commit must be reviewed.
+               Commit code when you completed some work.
+
+               Commit changes, whenever completed automation of some user story.
+               Then, add commit message like for example:
+                            "completed automation of VYT-4321 Driver should be able to add fuel logs".
+               It is not only about scripts, can also add utilities, fix something.....
+
+               The main idea is that we have to be careful with master branch.
+
+               In applications repository, not testing framework, we can have a lot of branches like for example:
+               2.12 - versions of application
+               2.13
+               2.14
+               2.15
+               release
+               master
+               dev
+               newfeature
+               somedevelopers
+
+
+               git branch name - to create a new branch
+               then we run git branch to see list of branches
+
+               dev
+             * master
+
+             * means that we are still on the master branch
+
+             How to switch to new branch?
+
+             git checkout branch_name - to switch to different branch
+
+             git checkout dev
+
+
