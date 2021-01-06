@@ -65,4 +65,23 @@ Git Branches
 
              git checkout dev
 
+             Switched to branch 'dev'
+
+             git commit -a -m "" to add all files and commit, so you don't need to run git add src/ before commit
+
+             git commit -a -m "added cars.txt"
+
+             [dev c534ea7] added cars.txt
+              3 files changed, 73 insertions(+), 9 deletions(-)
+              create mode 100644 cars.txt
+
+              if you don't stage files (git add) and miss -a, you will get "Nothing to commit"
+
+              git log - to see history of commits
+
+              enter q to exit log
+
+              git log --oneline - to see short version of log
+
+
 
