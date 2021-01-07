@@ -90,3 +90,23 @@ Git Branches
 
               git checkout feature
               git push --set-upstream origin feature - connecting local feature branch with remote feature branch (origin)
+
+              If you have this error, you didn't connect local branch with remote.
+              fatal: The current branch feature has no upstream branch.
+              To push the current branch and set the remote as upstream, use
+
+              To  connect/create new remote branch on github branch:
+              git push --set-upstream origin branch_name
+
+              ### Protect master branch from direct commits and enforce pull requests with code review.
+                    Code review will improve code quality.
+                    Also, we will make sure that master branch has 100% working code.
+                    Everyone works on their own branchm and then creates pull request to merge changes with master branch.
+
+              1. Go to settings
+              2. Branches
+              3. Create rule: master
+              4. Select:
+                    Require pull request reviews before merging
+                    Include administrators
+              5. Click create
