@@ -87,3 +87,6 @@ Git Branches
 
               git branch -d dev
               Deleted branch dev (was 41537d2).
+
+              git checkout feature
+              git push --set-upstream origin feature - connecting local feature branch with remote feature branch (origin)
