@@ -1,5 +1,3 @@
-
-
 Git Branches
         What is branch?
             It's one version of your project.
@@ -83,5 +81,9 @@ Git Branches
 
               git log --oneline - to see short version of log
 
+              git log --all --decorate --oneline --graph - history of all commits
 
+              git branch -d branch_name - delete branch
 
+              git branch -d dev
+              Deleted branch dev (was 41537d2).
